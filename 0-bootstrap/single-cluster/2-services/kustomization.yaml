@@ -120,7 +120,7 @@ patches:
       value: https://github.com/nickmerrett/multi-tenancy-gitops-apps.git
     - op: add
       path: /spec/source/targetRevision
-      value: master
+      value: main 
 - target:
     group: argoproj.io
     kind: Application
