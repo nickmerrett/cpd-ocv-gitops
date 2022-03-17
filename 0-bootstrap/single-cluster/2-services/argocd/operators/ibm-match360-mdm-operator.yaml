@@ -19,14 +19,16 @@ spec:
     path: operators/ibm-match360-mdm-operator
     helm:
       values: |
-        match360mdmoper:
-          subscription:
-            channel: v1.1
-            installPlanApproval: Automatic
+        subscriptions:
+          match360mdmoper:
             name: ibm-mdm
-            source: ibm-operator-catalog
-            sourceNamespace: openshift-marketplace
-            startingCSV: ibm-mdm.v1.1.188
+            subscription:
+              channel: v1.1
+              installPlanApproval: Automatic
+              name: ibm-mdm
+              source: ibm-operator-catalog
+              sourceNamespace: openshift-marketplace
+              startingCSV: ibm-mdm.v1.1.188
   syncPolicy:
     automated:
       prune: true
