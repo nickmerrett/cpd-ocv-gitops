@@ -38,4 +38,4 @@ patches:
       value: https://github.com/nickmerrett/cpd-ocv-infra-gitops.git
     - op: add
       path: /spec/source/targetRevision
-      value: master
+      value: main

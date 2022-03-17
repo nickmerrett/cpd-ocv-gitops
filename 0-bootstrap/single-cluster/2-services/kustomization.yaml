@@ -109,7 +109,7 @@ patches:
       value: https://github.com/nickmerrett/cpd-ocv-services-gitops.git
     - op: add
       path: /spec/source/targetRevision
-      value: master
+      value: main
 - target:
     group: argoproj.io
     kind: Application
