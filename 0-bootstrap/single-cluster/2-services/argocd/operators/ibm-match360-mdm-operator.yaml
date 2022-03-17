@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-match360-mdm-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "270"
+  labels:
+    gitops.tier.group: ibm-cloudpak
+    gitops.tier.layer: services
+    gitops.tier.source: git
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: openshift-operators
+    server: 'https://kubernetes.default.svc'
+  project: services
+  source:
+    path: operators/ibm-match360-mdm-operator
+    helm:
+      values: |
+        match360mdmoper:
+          subscription:
+            channel: v1.1
+            installPlanApproval: Automatic
+            name: ibm-mdm
+            source: ibm-operator-catalog
+            sourceNamespace: openshift-marketplace
+            startingCSV: ibm-mdm.v1.1.188
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
