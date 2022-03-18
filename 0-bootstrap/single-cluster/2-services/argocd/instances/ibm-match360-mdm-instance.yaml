@@ -16,7 +16,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: instances/ibm-match360-mdm-instance.yaml
+    path: instances/ibm-match360-mdm-instance
   syncPolicy:
     automated:
       prune: true
