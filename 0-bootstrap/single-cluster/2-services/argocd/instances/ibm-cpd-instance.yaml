@@ -16,7 +16,9 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: instances/ibm-cpd-instance
+    chart: ibm-cpd-platform-instance
+    repoURL: "" # Populated by kustomize patches in 2-services/kustomization.yaml
+    targetRevision: 0.1.2
     helm:
       parameters:
       - name: metadata.name
