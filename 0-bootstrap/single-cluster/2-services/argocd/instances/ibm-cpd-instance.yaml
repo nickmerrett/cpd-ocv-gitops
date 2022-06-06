@@ -7,7 +7,7 @@ metadata:
   labels:
     gitops.tier.group: ibm-cloudpak
     gitops.tier.layer: services
-    gitops.tier.source: git
+    gitops.tier.source: helm 
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
