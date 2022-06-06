@@ -115,25 +115,6 @@ patches:
       path: /spec/source/targetRevision
       value: main
 - target:
-    group: argoproj.io
-    kind: Application
-    labelSelector: "gitops.tier.layer=applications,gitops.tier.source=git"
-  patch: |-
-    - op: add
-      path: /spec/source/repoURL
-      value: https://github.com/nickmerrett/multi-tenancy-gitops-apps.git
-    - op: add
-      path: /spec/source/targetRevision
-      value: main 
-- target:
-    group: argoproj.io
-    kind: Application
-    labelSelector: "gitops.tier.layer=services,gitops.tier.source=helm"
-  patch: |-
-    - op: add
-      path: /spec/source/repoURL
-      value: https://charts.cloudnativetoolkit.dev
-- target:
     name: ibm-automation-foundation-operator
   patch: |-
     - op: add

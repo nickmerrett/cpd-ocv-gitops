@@ -28,9 +28,6 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: https://github.com/nickmerrett/cpd-ocv-gitops.git
-    - op: add
-      path: /spec/sourceRepos/-
       value: https://github.com/nickmerrett/cpd-ocv-infra-gitops.git
 - target:
     group: argoproj.io
@@ -39,16 +36,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: https://github.com/nickmerrett/cpd-ocv-gitops.git
-    - op: add
-      path: /spec/sourceRepos/-
       value: https://github.com/nickmerrett/cpd-ocv-services-gitops.git
-    - op: add
-      path: /spec/sourceRepos/-
-      value: https://github.com/nickmerrett/multi-tenancy-gitops-apps.git
-    - op: add
-      path: /spec/sourceRepos/-
-      value: https://charts.cloudnativetoolkit.dev
 - target:
     group: argoproj.io
     kind: AppProject
@@ -57,6 +45,3 @@ patches:
     - op: add
       path: /spec/sourceRepos/-
       value: https://github.com/nickmerrett/cpd-ocv-gitops.git
-    - op: add
-      path: /spec/sourceRepos/-
-      value: https://github.com/nickmerrett/multi-tenancy-gitops-apps.git
