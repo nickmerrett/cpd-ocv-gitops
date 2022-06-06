@@ -29,6 +29,8 @@ spec:
         value: "Enterprise"
       - name: spec.storageClass
         value: "ocs-storagecluster-cephfs"
+      - name: spcc.zenCoreMetadbStorageClass
+        value: "ocs-storagecluster-ceph-rbd"
   syncPolicy:
     automated:
       prune: true
